@@ -1,0 +1,26 @@
+.main {
+    padding: 1rem 2rem;
+    background-color: aquamarine;
+    border-radius: 4px;
+    border: none;
+    margin: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.primary{ 
+    background-color: blue;
+    color: aliceblue;
+}
+
+.secondary{    
+    background-color: rgb(162, 10, 142);
+    color: rgb(34, 138, 229);
+}
+
+.letters {
+    padding:  0.3rem;
+    margin-right: 1rem;
+    background-color: blueviolet;
+    border-radius: 25%;
+}

@@ -1,0 +1,50 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs button {
+    border: none;
+    color: rgb(82, 82, 82);
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tabs button:hover {
+    color: white;
+    background-color: rgb(214, 176, 249);
+}
+
+.tabs button:disabled {
+    background: rgb(230, 69, 230);
+    color: white;
+}
+
+.title {
+    color: black;
+    font-size: medium;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.content {
+    padding: 10px 20px;
+    background-color: white;
+    font-weight: 300;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.content,
+button {
+    font-size: 15px;
+}

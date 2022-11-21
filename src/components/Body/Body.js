@@ -7,7 +7,7 @@ import { Sque } from '../Sque/Sque';
 export const Body = () => {
     const {theme, setTheme} = useContext(ThemeContext);
     const [colors, setColors] = useState([]);
-    const [themeColor, setThemeColor]
+    const [themeColor, setThemeColor] = useState();
     const myInput = useRef();
     const randomColor = () => {
         return `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`

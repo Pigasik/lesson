@@ -7,7 +7,7 @@ import { Sque } from '../Sque/Sque';
 export const Body = () => {
     const {theme, setTheme} = useContext(ThemeContext);
     const [colors, setColors] = useState([]);
-    const [themeColor, setThemeColor] = useState();
+    const themeColor = useRef();
     const myInput = useRef();
     const randomColor = () => {
         return `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
@@ -28,18 +28,15 @@ export const Body = () => {
         }
         return arr;
     }
-
+    const colorGame = randomNumber(0, 2);
     return <main className={`${styles.main} ${theme === 'black' ? styles.black : ''}`}>
-        <button onClick={() => setTheme(prev => prev === 'white' ? 'black' : 'white')}>Swith</button>
-        <p onClick={() => myInput.current.focus()}>{theme}</p>
-        <input ref={myInput} type={'text'}></input>
+            <button onClick={() => setTheme(prev => prev === 'white' ? 'black' : 'white')}>Swith</button>
+            <p onClick={() => myInput.current.focus()}>{theme}</p>
+            <input ref={myInput} type={'text'}></input>
         <div>
-        <h1>{colors[randomNumber(0, 2)]}</h1>
-        { colors.map((el) => <Sque key={el} color={el}/>)}
-        {/* <Sque color={randomColor()}/>
-        <Sque color={randomColor()}/>
-        <Sque color={randomColor()}/> */}
+            <h1>Проверим твою удажу! Нажми на квадрат</h1>    
+            <h1>{colors[colorGame]}</h1>
+            {colors.map((el) => <Sque key={el} color={el} ref={themeColor} onClick={() => alert(colors[colorGame] === el ? 'Ты выйграл' : 'Повезет в другой раз!')}/> )}
         </div>
-        
     </main>;
 }

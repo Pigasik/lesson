@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
-import HW_2 from './HW_2';
+import HW_3 from './HW_3';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <HW_2 />
+    <HW_3 />
   </React.StrictMode>
 );
 

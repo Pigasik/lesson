@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom'
 import './index.css';
-import App from './App';
+//import App from './App';
+import Lesson5 from './Lesson5';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 //import HW_3 from './HW_3';
 
@@ -12,7 +13,7 @@ root.render(
  
   <React.StrictMode>
      <BrowserRouter>
-        <App />
+        <Lesson5 />
         {/* <HW_3 /> */}
      </BrowserRouter>
   </React.StrictMode>
